@@ -21,6 +21,8 @@ function getNextHandInDate(){
 }
 
 function renderHandins(){
+	// Now, I know I'm injecting HTML elements here, but I technical debt is something for future me.
+
 	$(".hand-ins").empty();
 	var ratio = 1.6;
 	var maxSize = 80;
@@ -31,7 +33,7 @@ function renderHandins(){
 	}
 
 	var getOpacity = function(i){
-		return i == currentHandin ?  1 - (1 / maxSize) * 10 : 1 - (1 / (maxSize / ((i - currentHandin) * ratio))) * 10;
+		return i == currentHandin ?  1 - (1 / maxSize) * 10 : 1 - (1 / (maxSize / ((i - currentHandin) * ratio))) * 10 < 0.1 ? "0.0; display: none;" : i == currentHandin ?  1 - (1 / maxSize) * 10 : 1 - (1 / (maxSize / ((i - currentHandin) * ratio))) * 10; 
 	}
 
 	var getColor = function(date, i){

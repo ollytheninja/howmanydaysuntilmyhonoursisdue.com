@@ -5,7 +5,8 @@ var handins = [
 	["Preliminary Report", new Date(2016, 6, 8, 23, 59)],
 	["Preliminary Presentation", new Date(2016, 6, 11, 23, 59)],
 	["Final Report", new Date(2016, 9, 14, 23, 59)],
-	["Final Presentation", new Date(2016, 10, 11, 23, 59)]
+	["Final Presentation", new Date(2016, 10, 11, 23, 59)],
+	["Death", new Date(2076, 9, 5, 18, 41)]
 ];
 
 var total = 7;
